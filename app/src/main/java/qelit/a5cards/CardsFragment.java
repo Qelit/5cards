@@ -36,15 +36,15 @@ public class CardsFragment extends Fragment {
         //создание RecyclerView
         recyclerView = (RecyclerView) inflater.inflate(
                 R.layout.fragment_cards, container, false);
-        //обращение к методам вызова
+        //обращение к методам вызова, между каждым вызовом добавлен слип. Решил сделать проще, вначале думал насчет Thread.
         createPosts(1);
-        sleep(1000);
+        sleep(500);
         createComments(1);
-        sleep(1000);
+        sleep(500);
         createUsers(1);
-        sleep(1000);
+        sleep(500);
         createPhotos(3);
-        sleep(1000);
+        sleep(500);
         createTodos(1);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
